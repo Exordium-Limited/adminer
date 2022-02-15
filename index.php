@@ -18,6 +18,8 @@ namespace docker {
                     $defaultDbDriver = getenv('ADMINER_DEFAULT_DB_DRIVER') ?: 'server';
                     $defaultDbHost = getenv('ADMINER_DEFAULT_DB_HOST') ?: '';
                     $defaultDb = getenv('ADMINER_DEFAULT_DB_NAME') ?: '';
+                    $defaultUser = getenv('ADMINER_DEFAULT_DB_USER') ?: '';
+                    $defaultPasswd = getenv('ADMINER_DEFAULT_DB_PASSWD') ?: '';
 
                     $defaultDbDriver = $defaultDbDriver == 'mysql' ? 'server' : $defaultDbDriver;
 
@@ -26,13 +28,17 @@ namespace docker {
                             'name="auth[server]" value="" title="hostname[:port]"',
                             'value="' . $defaultDbDriver . '"',
                             'selected="">MySQL',
-                            'name="auth[db]" value=""'
+                            'name="auth[db]" value=""',
+                            'name="auth[password]"',
+                            'name="auth[username]" id="username" value=""'
                         ],
                         [
                             'name="auth[server]" value="' . $defaultDbHost . '" title="hostname[:port]"',
                             'value="' . $defaultDbDriver . '" selected="selected"',
                             '>MySQL',
-                            'name="auth[db]" value="' . $defaultDb . '"'
+                            'name="auth[db]" value="' . $defaultDb . '"',
+                            'name="auth[password]" value="' . $defaultPasswd . '"',
+                            'name="auth[username]" id="username" value="' . $defaultUser . '"'
                         ],
                         $form
                     );
