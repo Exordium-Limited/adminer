@@ -30,6 +30,8 @@ All images built for `linux/amd64` and `linux/arm64`
 | `ADMINER_DEFAULT_DB_DRIVER` | `server`      | `server` is the same as `mysql`, `pgsql` for PostgreSQL |
 | `ADMINER_DEFAULT_DB_HOST`   |               |                                                         |
 | `ADMINER_DEFAULT_DB_NAME`   |               |                                                         |
+| `ADMINER_DEFAULT_DB_USER`   |               |                                                         |
+| `ADMINER_DEFAULT_DB_PASSWD` |               |                                                         |
 | `ADMINER_DESIGN`            |               | Adminer theme, e.g. `nette`                             |
 | `ADMINER_PLUGINS`           |               | Separated by space, e.g. `tables-filter tinymce`        |
 | `PHP_CLI_MEMORY_LIMIT`      | `512M`        |                                                         |

@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_TAG
+ARG BASE_IMAGE_TAG=latest
 
 FROM wodby/php:${BASE_IMAGE_TAG}
 
